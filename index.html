@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+<script src="https://kit.fontawesome.com/9322742e82.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<title>Hacker News</title>
+
+</head>
+<body>
+
+
+  <div class="topnav">
+    <a class="active" href="">
+      <IMG style="width:25%" SRC="resources/logo.gif">
+      <br>Hacker News
+    </a>
+    <a href="#News" onclick="filterSelection('news')">
+      <!--<IMG style="width:30%" SRC="resources/news.png"> News-->
+      <i class="fa-solid fa-newspaper" style="font-size: 30px;"></i> News
+      
+    </a>
+    <!--<a href="#Ask"><IMG style="width:30%" SRC="resources/ask.png"> Ask</a>-->
+    <a href="#Ask" onclick="filterSelection('ask')"><i class="fa-sharp fa-solid fa-question" style="font-size: 30px;"></i> Ask</a>
+    <!--<a href="#Show"><IMG style="width:30%" SRC="resources/show.png"> Show</a>-->
+    <a href="#Show" onclick="filterSelection('showOff')"><i class="fa-solid fa-tv" style="font-size: 30px;"></i> Show</a>
+    <!--<a href="#Jobs"><IMG style="width:30%" SRC="resources/jobs_icon.png"> Jobs</a>-->
+    <a href="#Jobs" onclick="filterSelection('jobs')"><i class="fa-solid fa-briefcase" style="font-size: 30px;"></i> Jobs</a>
+    <input style="font-size: 20px;" type="text" placeholder="Search..">
+    
+  </div>
+
+  
+  <!--
+  <br>
+  <br>
+  <br>
+  <br>
+  <br> -->
+
+  <div class="fixed_button">
+    <button><i class="fa-solid fa-plus"></i><br><strong>Post</strong></button>
+  </div>
+
+<!-- Postings -->
+
+<div class="cards">
+    <div class="card ask">
+      <div class="card__icon" onclick="filterSelection('ask')"><i class="fa-sharp fa-solid fa-question"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 1</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card jobs">
+      <div class="card__icon" onclick="filterSelection('jobs')"><i class="fa-solid fa-briefcase"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 2</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card news">
+      <div class="card__icon" onclick="filterSelection('news')"><i class="fa-solid fa-newspaper"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 3</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card showOff">
+      <div class="card__icon" onclick="filterSelection('showOff')"><i class="fa-solid fa-tv"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 4</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card jobs">
+      <div class="card__icon" onclick="filterSelection('jobs')"><i class="fa-solid fa-briefcase"></i></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 5</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card jobs">
+      <div class="card__icon" onclick="filterSelection('jobs')"><i class="fa-solid fa-briefcase"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 6</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card ask">
+      <div class="card__icon" onclick="filterSelection('ask')"><i class="fa-sharp fa-solid fa-question"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 7</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card ask">
+      <div class="card__icon" onclick="filterSelection('ask')"><i class="fa-sharp fa-solid fa-question"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 8</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card jobs">
+      <div class="card__icon" onclick="filterSelection('jobs')"><i class="fa-solid fa-briefcase"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 9</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card news">
+      <div class="card__icon" onclick="filterSelection('news')"><i class="fa-solid fa-newspaper"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 10</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card showOff">
+      <div class="card__icon" onclick="filterSelection('showOff')"><i class="fa-solid fa-tv"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 11</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card jobs">
+      <div class="card__icon" onclick="filterSelection('jobs')"><i class="fa-solid fa-briefcase"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 12</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card news">
+      <div class="card__icon" onclick="filterSelection('news')"><i class="fa-solid fa-newspaper"></i></div>
+      <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+      <h2 class="card__title">Posting 13</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">Read more <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
